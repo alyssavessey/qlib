@@ -17,6 +17,7 @@ INC_DIR = \
     ./thread
 
 SOURCES = \
+    thread/mutex.cpp \
     thread/thread.cpp
 
 CFLAGS  = -Wall
