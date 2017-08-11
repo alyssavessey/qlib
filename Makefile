@@ -24,7 +24,7 @@ CFLAGS  = -Wall
 CFLAGS += $(DEBUG)
 CFLAGS += $(FAST)
 CFLAGS += -D_LINUX
-CFLAGS += -std=c++11
+CFLAGS += -std=c++14
 
 CC      = gcc
 CL      = g++
