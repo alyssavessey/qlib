@@ -13,10 +13,13 @@ endif
 
 INC_DIR = \
     . \
+	./math \
+	./math/linalgebra \
     ./sort \
     ./thread
 
 SOURCES = \
+	math/linalgebra/matrix.cpp \
     thread/mutex.cpp \
     thread/thread.cpp
 
