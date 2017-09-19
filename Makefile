@@ -20,6 +20,7 @@ INC_DIR = \
 
 SOURCES = \
 	math/linalgebra/matrix.cpp \
+	math/linalgebra/vector.cpp \
     thread/mutex.cpp \
     thread/thread.cpp
 
