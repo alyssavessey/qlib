@@ -4,7 +4,7 @@ using namespace qlib::thread;
 
 void* qlib::thread::_thread(void* arg) {
     Thread* thread = static_cast<Thread*>(arg);
-    if (thread != NULL) {
+    if (thread != nullptr) {
         thread->run();
     }
 
@@ -32,7 +32,7 @@ bool Thread::cancel() {
 bool Thread::start() {
     bool flag = false;
 
-    int rc = pthread_create(&id, NULL, qlib::thread::_thread, this);
+    int rc = pthread_create(&id, nullptr, qlib::thread::_thread, this);
     if (rc == 0) {
         flag = true;
     }

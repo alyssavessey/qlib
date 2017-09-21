@@ -127,12 +127,23 @@ const Scalar& Vector::operator()(size_t i) const {
     return data[i];
 }
 
+Scalar Vector::dot(const Vector& other) const {
+    if (_size != other._size) {
+        throw new QlibInvalidVectorOpException();
+    }
+    Scalar ret = 0.0;
+    for (size_t i = 0; i < _size; ++i) {
+        ret += data[i] * other.data[i];
+    }
+    return ret;
+}
+
 size_t Vector::size() const {
     return _size;
 }
 
 void Vector::allocate() {
-    if (data != NULL) {
+    if (data != nullptr) {
         destruct();
     }
     data = new Scalar[_size];
@@ -140,5 +151,5 @@ void Vector::allocate() {
 
 void Vector::destruct() {
     delete[] data;
-    data = NULL;
+    data = nullptr;
 }

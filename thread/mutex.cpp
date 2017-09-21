@@ -3,7 +3,7 @@
 using namespace qlib::thread;
 
 Mutex::Mutex() {
-    pthread_mutex_init(&id, NULL);
+    pthread_mutex_init(&id, nullptr);
 }
 
 Mutex::~Mutex() {

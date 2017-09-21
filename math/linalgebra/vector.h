@@ -34,6 +34,8 @@ class Vector {
     Scalar& operator()(size_t i);
     const Scalar& operator()(size_t i) const;
 
+    Scalar dot(const Vector& other) const;
+
     size_t size() const;
 
   private:

@@ -5,7 +5,7 @@ using namespace qlib::math::linalgebra;
 Matrix::Matrix(size_t size_m, size_t size_n) :
     size_m(size_m),
     size_n(size_n),
-    data(NULL)
+    data(nullptr)
 {
     allocate();
 }
@@ -13,7 +13,7 @@ Matrix::Matrix(size_t size_m, size_t size_n) :
 Matrix::Matrix(size_t size_m, size_t size_n, Scalar value) :
     size_m(size_m),
     size_n(size_n),
-    data(NULL)
+    data(nullptr)
 {
     allocate();
     for (size_t i = 0; i < size_m; ++i) {
@@ -26,7 +26,7 @@ Matrix::Matrix(size_t size_m, size_t size_n, Scalar value) :
 Matrix::Matrix(const Matrix& other) :
     size_m(0),
     size_n(0),
-    data(NULL)
+    data(nullptr)
 {
     *this = other;
 }
@@ -149,7 +149,7 @@ size_t Matrix::N_size() const {
 }
 
 void Matrix::allocate() {
-    if (data != NULL) {
+    if (data != nullptr) {
         destruct();
     }
     if ((size_m == 0) || (size_n == 0)) {
@@ -163,13 +163,13 @@ void Matrix::allocate() {
 }
 
 void Matrix::destruct() {
-    if (data != NULL) {
+    if (data != nullptr) {
         for (size_t i = 0; i < size_m; ++i) {
             delete data[i];
-            data[i] = NULL;
+            data[i] = nullptr;
         }
         delete data;
-        data = NULL;
+        data = nullptr;
     }
 
     size_m = 0;
