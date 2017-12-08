@@ -13,12 +13,14 @@ endif
 
 INC_DIR = \
     . \
+	./debug \
 	./math \
 	./math/linalgebra \
     ./sort \
     ./thread
 
 SOURCES = \
+	debug/util.cpp \
 	math/linalgebra/matrix.cpp \
 	math/linalgebra/vector.cpp \
     thread/mutex.cpp \
